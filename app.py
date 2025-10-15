@@ -12,11 +12,10 @@ def home():
         "endpoints yang tersedia": {
             "GET /pengguna": "Menampilkan daftar pengguna",
             "POST /pengguna": "Menambahkan pengguna baru",
-            "GET /pengguna/<id>": "Menampilkan detail pengguna",
-            "DELETE /pengguna/<id>": "Menghapus pengguna"
+            "GET /pengguna/(id)": "Menampilkan detail pengguna",
+            "DELETE /pengguna/(id)": "Menghapus pengguna"
         }
     })
-    return Response(json.dumps(data, ensure_ascii=False), mimetype='application/json')
 
 if __name__ == '__main__':
     app.run(debug=True)
