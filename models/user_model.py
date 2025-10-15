@@ -1,6 +1,6 @@
 pengguna = [
-    {"id": 1, "name": "budi", "email": "budi@gmail.com"},
-    {"id": 2, "name": "jay", "email": "jay@gmail.com"}
+    {"id": 1, "nama": "budi", "email": "budi@gmail.com"},
+    {"id": 2, "nama": "jay", "email": "jay@gmail.com"}
 ]
 
 def detail_pengguna_by_id(id_pengguna):
@@ -12,7 +12,7 @@ def detail_pengguna_by_id(id_pengguna):
 def tambah_pengguna(nama, email):
     new_user = {
         "id": len(pengguna) + 1,
-        "name": nama,
+        "nama": nama,
         "email": email
     }
     pengguna.append(new_user)
