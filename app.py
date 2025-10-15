@@ -1,4 +1,5 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, Response
+import json
 from routes.users import users_bp
 
 app = Flask(__name__)
@@ -15,6 +16,7 @@ def home():
             "DELETE /pengguna/<id>": "Menghapus pengguna"
         }
     })
+    return Response(json.dumps(data, ensure_ascii=False), mimetype='application/json')
 
 if __name__ == '__main__':
     app.run(debug=True)
